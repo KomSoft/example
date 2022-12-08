@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="pudge" class="com.komsoft.example.prespring2.Pudge" >
+        <constructor-arg name="name" value="pudge" />
+        <constructor-arg name="level" value="11" />
+        <constructor-arg name="heroItem" ref="item1" />
+<!--
+        <property name="name" value="pudge" />
+        <property name="level" value="5" />
+        <property name="heroItem" value="item1" />
+-->
+    </bean>
+
+    <bean id="item1" class="com.komsoft.example.prespring2.Item" >
+        <constructor-arg name="nameOfItem" value="Gem Of True Sight" />
+<!--
+        <property name="nameOfItem" value="Gem Of True Sight" />
+-->
+    </bean>
+
+<!--
+    <bean id="item2" class="com.komsoft.example.prespring2.Item" >
+        <constructor-arg name="nameOfItem" value="Boots Of Travel" />
+        <property name="nameOfItem" value="Boots Of Travel" />
+    </bean>
+-->
+
+</beans>

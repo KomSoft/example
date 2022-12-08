@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="customer" class="com.komsoft.example.springcart.entity.Customer" >
+        <constructor-arg name="name" value="Customer One"/>
+        <property name="cart" ref="cart" />
+    </bean>
+
+    <bean id="cart" class="com.komsoft.example.springcart.entity.Cart" >
+        <constructor-arg value="3"/>
+    </bean>
+
+    <bean id="product" class="com.komsoft.example.springcart.entity.Product" />
+    <bean id="productRepository" class="com.komsoft.example.springcart.repository.ProductRepository" />
+
+</beans>
